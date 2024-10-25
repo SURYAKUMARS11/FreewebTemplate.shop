@@ -1,0 +1,271 @@
+/*************************/
+/*     02. Preloader     */
+/*************************/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fbf9f5;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #ffbd50;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+/* work section starts */
+.work{
+	/* background: #010124; */
+	background: linear-gradient(to bottom, #010136, #00003a);
+	padding-top: 25px;
+	padding-bottom: 50px;
+    margin-top: 20px;
+  }
+  .work h2{
+	color: #fff;
+	padding: 1rem;
+	font-size: 30px;
+	text-align: center;
+  }
+  .work .heading span{
+	color: #ffbd50;
+  }
+  .work .button-group{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1rem;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+  }
+  .work .button-group .btn{
+	outline: none;
+	padding: 0.5rem 1.5rem;
+	background: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 15px;
+  }
+  .work .button-group .btn:hover{
+	background-color: #fff;
+	color: #000;
+  }
+  .work .button-group .btn.is-checked{
+	background-color: #fff;
+	color: #000;
+  }
+  .work .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1rem;
+	margin: 2rem 6rem;
+  }
+  .work .box-container .box{
+	border-radius: .5rem;
+	box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
+	position: relative;
+	overflow:hidden;
+	height:17rem;
+	background: #fff;
+	border: none;
+  }
+  .work .box-container .box img{
+	height: 100%;
+	width:100%;
+	object-fit: cover;
+  }
+  .work .box-container .box .content{
+	height: 100%;
+	width:100%;
+	position: absolute;
+	top:85%; left:0;
+	background:rgba(255, 255, 255, 0.9);
+	display: flex;
+	flex-direction: column;
+  }
+  .work .box-container .box .content .tag{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 3rem;
+	width: 100%;
+	padding-left: 1rem;
+	background: #ffbd50;
+  }
+  .work .box-container .box .content .tag h3{
+	font-size: 1.1rem;
+  }
+  .work .box-container .box:hover .content{
+	top: 25%;
+  }
+  .work .desc {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }
+  .work .desc p{
+	font-size: 0.9rem;
+  }
+  .work .desc .btns{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	
+  }
+  .work .desc .btns .btn{
+	line-height: 0;
+	display: inline;
+	padding: 1rem 1rem;
+	border-radius: .2rem;
+	font-size: 0.8rem;
+	color: #fff;
+	background: rgb(12, 12, 12);
+	margin-right: 1rem;
+	text-decoration: none;
+  }
+  .work .desc .btns .btn:hover{
+	background: #310ae0f5;
+  }
+  
+  @media screen and (max-width: 450px) {
+	.work .button-group{
+	  width: 100%;
+	}
+	.work .box-container{
+	  margin: 0rem;
+	}
+	.work .box-container .grid-item .box{
+	  width: 95% !important;
+	}
+  }
+  
+
+  .sticky-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top when scrolled to */
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #fff; /* Add a background to avoid overlap issues */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for clarity */
+    padding: 10px 0; /* Add padding for some space */
+  }
+
+  /**********************/
+/*     17. Footer     */
+/**********************/
+.footer {
+	padding-top: 4.75rem;
+	padding-bottom: 2rem;
+	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/header-background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.footer .footer-col {
+	margin-bottom: 2.25rem;
+}
+
+.footer h5 {
+	margin-bottom: 0.5rem;
+}
+
+.footer a { 
+	text-decoration: none;
+}
+
+.footer h5,
+.footer p,
+.footer a {
+	color: #bbb;
+}
+
+.footer .list-unstyled .fas {
+	color: #bbb;
+	font-size: 0.5rem;
+	line-height: 1.375rem;
+}
+
+.footer .list-unstyled .media-body {
+	margin-left: 0.625rem;
+}
+
+.footer .fab {
+	margin-bottom: 0.75rem;
+	margin-right: 1rem;
+	color: #ccc;
+	font-size: 1.25rem;
+	transition: all 0.2s ease;
+}
+
+.footer .fab:hover {
+	color: #ffbd50;
+}
+
+
+/*************************/
+/*     18. Copyright     */
+/*************************/
+.copyright {
+	padding-top: 1.5rem;
+	padding-bottom: 0.375rem;
+	background-color: #000;
+	text-align: center;
+}
+
+.copyright .p-small {
+	color: #999;
+	font-size: 0.75rem;
+	line-height: 1.375rem;
+}
+
+.copyright a {
+	color: #999;
+}
